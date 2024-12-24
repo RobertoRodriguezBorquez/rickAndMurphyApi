@@ -5,7 +5,7 @@ const btnAtras = document.getElementById("btnAtras");
 const btnSgte = document.getElementById("btnSiguiente");
 
 //cambiando el título prueba
-tittle.textContent = "Personajes de la serie Rick and Murphy";
+tittle.textContent = "Personajes serie Rick and Murphy";
 /* main.innerHTML += estilosTarjeta(dato.name,dato.id,dato.species,dato.gender,dato.status,dato.origin.name) */
 
 /* diseño de tarjeto con los datos sacados  de la api */
@@ -19,15 +19,15 @@ const estilosTarjeta = (image, id, name, especie, gender, status, origen) => {
             <h2 class="tarjetaTittle">${name}</h2>
             </div>
           <div class="otrosDatos">
-            <h2>especie</h2>
+            <h2>Especie</h2>
             <p>${especie}</p>
           
          
-            <h2>genero</h2>
+            <h2>Género</h2>
             <p>${gender}</p>
           
           
-            <h2>estado</h2>
+            <h2>Estado</h2>
             <p>${status}</p>
           
         
