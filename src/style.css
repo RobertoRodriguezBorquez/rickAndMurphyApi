@@ -4,113 +4,157 @@
   box-sizing: border-box; /* Mejora la gestión de padding y borde */
   font-family: "Press Start 2P", system-ui;
 }
-body{
-  
+body {
   min-height: 100vh;
- 
 }
 /* Contenedor elementos */
 .contenedor {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     "header"
     "main"
     "paginas"
     "footer";
   grid-template-rows: 400px auto 50px 100px; /* Alturas adaptativas */
   min-height: 100vh;
-  
+
   text-align: center;
 }
 
-/* Header */
 header {
   grid-area: header;
-  background-color: rgba(249, 249, 249, 0.939);
+  background: linear-gradient(135deg, #d4d4d4, #9e9e9e);
   text-align: center;
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  justify-content: center; 
-  padding: 1rem; 
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+  padding: 2rem 1rem; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1); 
 }
 
 .headerContenedorImg {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 1rem; 
+  width: 120px; /* Tamaño ligeramente mayor */
+  height: 120px;
+  margin-bottom: 1rem;
+  border-radius: 50%; /* Imagen en forma circular */
+  overflow: hidden; /* Asegura que el contenido no se desborde */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destacar */
 }
 
 header img {
   width: 100%;
-  height: auto; 
-  object-fit: cover; 
+  height: 100%;
+  object-fit: cover; /* Escala la imagen proporcionalmente */
 }
 
-header h1{
-  
+header h1 {
   font-size: 3rem;
-  color: black;
- 
-  
+  color: #ffffff; /* Texto blanco para contraste */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para mayor legibilidad */
+  margin-top: 1rem;margin-bottom: 50px;
+  font-family: "Press Start 2P", system-ui, sans-serif; /* Refuerza el estilo retro o digital */
 }
+
 /* contenido */
-main{
+main {
   grid-area: main;
-  
-  
-  
-    display: grid;
-    grid-auto-rows: 30rem;
-    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-    gap: 1em;
-   
-  
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Adapta el ancho */
+  grid-auto-rows: min-content; /* Altura mínima según contenido */
+  gap: 1.5em; /* Espaciado entre tarjetas */
+  padding: 2rem;
+}
+.tarjeta {
+  display: flex;
+  flex-direction: column; 
+
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+
+  background-color: #fdfdfd;
+}
+.contenedorImg{
+  margin-bottom: -5px;
   
 }
-.tarjeta{
+.tarjeta {
+  display: flex;
+  flex-direction: column; 
   
-  
- 
-  background-color: lightgray;
-  
-  
-  padding: 1rem;
-  border-radius: 5px;
-  margin: 1em;
-  
+  justify-content: space-between; /* Espaciado equilibrado entre los elementos */
+  gap: 1rem; /* Espacio entre los elementos de la tarjeta */
+  padding: 16px;
+  border: 1px solid #e0e0e0; /* Borde suave */
+  border-radius: 12px; /* Bordes redondeados */
+  background-color: #ffffff; /* Fondo blanco para contraste */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animación */
 }
 
-.tarjeta img{
-  height: 150px;
-  width: 150px;
-  
-
-}
-.tarjetaTittle{
-  font-size: 35px;
-  color: darkblue;
+.tarjeta:hover {
+  transform: translateY(-10px); /* Levanta la tarjeta al pasar el mouse */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
 }
 
-.tarjeta p{
-  font-size: 15px;
-  color: black;
+.tarjeta img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Redondea las esquinas de la imagen */
+  margin-bottom: 1rem;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil en la imagen */
 }
+
+.nombreId {
+  background: linear-gradient(135deg, #4b8b71, #47b24b);
+  font-size: 1.2em;
+  color: #ffffff; /* Gris oscuro */
+  padding: 10px 15px; /* Espaciado interno */
+  border-radius: 8px; /* Bordes redondeados */
+  text-align: center;
+  font-weight: bold;
+}
+
+.otrosDatos {
+  display: flex;
+  flex-direction: column; /* Alinea datos en columna */
+  align-items: flex-start; /* Alinea el texto a la izquierda */
+  font-size: 1em;
+  color: #333333; /* Texto más oscuro para contraste */
+  padding: 10px 0;
+}
+
+.otrosDatos h2 {
+  font-size: 1.3em;
+  font-weight: 600; /* Resalta el título */
+  margin-bottom: 0.5rem;
+  color: #2a2a2a;
+}
+
+.otrosDatos p {
+  font-size: 1em;
+  font-style: italic; /* Agrega un estilo interesante */
+  margin: 5px 0;
+  color: #555555;
+}
+
 /* sección botones */
-.paginas{
+.paginas {
   display: flex;
   grid-area: paginas;
   background-color: cadetblue;
   justify-content: center;
   align-items: center;
-  
- 
 }
 /* fin de página */
-footer{
+footer {
   grid-area: footer;
   background-color: yellow;
-  
-  
 }
-
