@@ -1,5 +1,6 @@
 * {
-  margin: 0;
+  
+  
   padding: 0;
   box-sizing: border-box; /* Mejora la gestión de padding y borde */
   font-family: "Press Start 2P", system-ui;
@@ -29,6 +30,7 @@ header {
   align-items: flex-start; 
   justify-content: flex-start; 
   min-height: 500px;
+  
   
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   border-bottom: 2px solid rgba(0, 0, 0, 0.1); 
@@ -170,14 +172,83 @@ main {
 
 /* sección botones */
 .paginas {
+ 
+}
+
+
+
+
+
+/* Estilos generales del footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.footer .footer-text a:last-child {
+  margin-left: 20px; /* Ajusta este valor según cuánto quieras separarlo */
+}
+
+
+/* Para pantallas medianas en adelante */
+@media (min-width: 768px) {
+ 
+    .footer {
+        flex-direction: row;
+        
+    }
+}
+
+/* Estilo del texto en el footer */
+.footer-text {
   display: flex;
-  grid-area: paginas;
-  background-color: cadetblue;
-  justify-content: center;
-  align-items: center;
+    font-size: 0.875rem;
+    color: #6b7280;
 }
-/* fin de página */
-footer {
-  grid-area: footer;
-  background-color: yellow;
+
+.footer-text a {
+    color: #6b7280;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
+
+.footer-text a:hover {
+    text-decoration: underline;
+    color: #1f2937;
+}
+
+/* Estilos para los iconos en el footer */
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+.footer-nav-item {
+    font-size: 1.5rem; /* Aumenta el tamaño de los iconos */
+    color: #6b7280;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav-item:hover {
+    color: #1f2937;
+}
+
+
+

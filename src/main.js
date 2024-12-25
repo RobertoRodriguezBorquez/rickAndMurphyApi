@@ -1,8 +1,6 @@
 //guardando elementos del html
 const main = document.getElementById("main");
 const tittle = document.getElementById("tittle");
-const btnAtras = document.getElementById("btnAtras");
-const btnSgte = document.getElementById("btnSiguiente");
 
 //cambiando el título prueba
 tittle.textContent = "Personajes serie Rick and Murphy";
